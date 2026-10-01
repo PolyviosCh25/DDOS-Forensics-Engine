@@ -6,21 +6,27 @@
 #include <cstdlib>
 
 int main() {
-    std::string filename = "../data/malware_urls.csv";
+    std::string filename = "../data/botnet_c2.csv";
     std::ifstream file(filename);
 
     if (!file.is_open()) {
-        std::cerr << "[-] Error: Could not open data file." << std::endl;
+        std::cerr << "[-] Error: Could not open Botnet dataset." << std::endl;
         return 1;
     }
 
-    std::cout << "=== C++ Network Forensics Engine Initialized ===\n";
-    std::cout << "[+] Reading live malware feed...\n\n";
+    std::cout << "=== C++ Forensics Engine: Shodan InternetDB Module ===\n";
+    std::cout << "[+] Ingesting Botnet C2 Infrastructure Feed...\n\n";
 
     std::string line;
     int count = 0;
+    
+    // Clear the previous output file
+    std::system("echo '' > ../data/shodan_results.json");
 
-    while (std::getline(file, line) && count < 3) { // Reduced to 3 for clean output
+    // Skip the first row (the CSV header)
+    std::getline(file, line);
+
+    while (std::getline(file, line) && count < 3) {
         if (line.empty() || line[0] == '#') continue;
 
         std::stringstream ss(line);
@@ -28,37 +34,33 @@ int main() {
         std::vector<std::string> columns;
 
         while (std::getline(ss, item, ',')) {
+            // Strip the quotation marks so the IP is perfectly clean
             if (!item.empty() && item.front() == '"') item.erase(0, 1);
             if (!item.empty() && item.back() == '"') item.pop_back();
             columns.push_back(item);
         }
 
-        if (columns.size() > 2) {
-            std::string raw_url = columns[2];
+        if (columns.size() > 1) {
+            std::string target_ip = columns[1];
             
-            // 1. Strip http://
-            size_t start_pos = raw_url.find("://");
-            start_pos = (start_pos != std::string::npos) ? start_pos + 3 : 0;
-            size_t end_pos = raw_url.find('/', start_pos);
-            std::string domain = raw_url.substr(start_pos, end_pos - start_pos);
+            // Failsafe: Skip if it still reads the header
+            if (target_ip == "dst_ip") continue;
 
-            // 2. Strip port number (e.g., :51736)
-            size_t port_pos = domain.find(':');
-            if (port_pos != std::string::npos) {
-                domain = domain.substr(0, port_pos);
-            }
-
-            std::cout << "[!] Target " << count + 1 << ": " << domain << std::endl;
+            std::cout << "[!] Querying Shodan InternetDB for C2 Server: " << target_ip << std::endl;
             
-            // 3. Automated OSINT Lookup (ASN, ISP, Country)
-            std::string command = "curl -s 'http://ip-api.com/json/" + domain + "?fields=status,country,isp,org,as'";
+            // Hit Shodan's open InternetDB API
+            std::string command = "curl -s 'https://internetdb.shodan.io/" + target_ip + "' >> ../data/shodan_results.json";
             std::system(command.c_str());
             
-            std::cout << "\n----------------------------------------\n";
+            // Add a newline to the JSON file so the outputs don't merge into one giant line
+            std::system("echo '' >> ../data/shodan_results.json");
+            
+            std::cout << "[+] Data saved to data/shodan_results.json\n";
             count++;
         }
     }
 
     file.close();
+    std::cout << "\n[+] Engine execution complete. Ready for analysis." << std::endl;
     return 0;
 }
