@@ -1,0 +1,152 @@
+========================================================
+  Live Threat Correlation Engine (Randomized Hunt)
+========================================================
+
+[+] Loaded 2420 active C2 IPs. Selecting 20 random targets...
+
+--------------------------------------------------------
+[!] TARGET HOST: 95.31.213.79
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 89.32.41.111
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 38.132.122.145
+    [+] Querying Censys Host API...
+        * Extracted TLS SHA-256: f408f58ef0693af9b5b5971a7983ef840ede77bad81028cd5d95fd35af5bf52c
+        * UI Pivot Query: host.services.cert.fingerprint_sha256: "f408f58ef0693af9b5b5971a7983ef840ede77bad81028cd5d95fd35af5bf52c"
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 82.65.19.134
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 64.89.161.196
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 45.202.0.111
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 130.94.93.147
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 106.12.111.209
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 139.159.203.44
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 139.64.164.252
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 181.206.118.219
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 176.65.144.177
+    [+] Querying Censys Host API...
+        * Extracted TLS SHA-256: c568835dee22f34b47364a12a0b09a40f444b81b269517a0d639d44cd787b52c
+        * UI Pivot Query: host.services.cert.fingerprint_sha256: "c568835dee22f34b47364a12a0b09a40f444b81b269517a0d639d44cd787b52c"
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 121.127.253.146
+    [+] Querying Censys Host API...
+        * Extracted TLS SHA-256: 48aebd01b910f0a9590d49b1a3e12740918ed6f3bdcac05fa5b468a5c413fefc
+        * UI Pivot Query: host.services.cert.fingerprint_sha256: "48aebd01b910f0a9590d49b1a3e12740918ed6f3bdcac05fa5b468a5c413fefc"
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 144.31.6.0
+    [+] Querying Censys Host API...
+        * Extracted TLS SHA-256: 9fcb4dfbe3ca1740d0f2b3f8b24b8be614bbb13bcd2c2ce534a647d4b2c88642
+        * UI Pivot Query: host.services.cert.fingerprint_sha256: "9fcb4dfbe3ca1740d0f2b3f8b24b8be614bbb13bcd2c2ce534a647d4b2c88642"
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 170.106.150.123
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 172.86.112.104
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 45.88.91.164
+    [+] Querying Censys Host API...
+        * Extracted TLS SHA-256: 517663b544f41d5f3ccf989aedbe1a4806bfbdb56e8ca412cf6ff26b82f73f33
+        * UI Pivot Query: host.services.cert.fingerprint_sha256: "517663b544f41d5f3ccf989aedbe1a4806bfbdb56e8ca412cf6ff26b82f73f33"
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 93.152.214.28
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 128.90.136.115
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        - No web panels recorded in URLScan.
+
+--------------------------------------------------------
+[!] TARGET HOST: 91.92.242.236
+    [+] Querying Censys Host API...
+        - No TLS certificate indexed by Censys yet.
+    [+] Querying URLScan.io...
+        * Web Payload Found: http://91.92.242.236/files-129312398/files/file_8dece6c27473f5d2.exe
+
+[+] Live Threat Correlation Complete.
